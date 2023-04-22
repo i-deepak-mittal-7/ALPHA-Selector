@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") -%>
+
+<h1> Hello Admin! </h1>
+
+<form action="/admin" method="post">
+    <% for(var i=0; i<infoList.length; i++) { %>
+        <% if(infoList[i].applicationStatus==="Pending") { %>
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h6> First Name: <%= infoList[i].firstName %> </h6>
+                <h6> Last Name: <%= infoList[i].lastName %> </h6>
+                <h6> E-mail: <%= infoList[i].email %> </h6>
+                <h6> Applied For: <%= infoList[i].post %> </h6>
+                <h6> Skills: <%= infoList[i].skills %> </h6>
+                <h6> Resume Link: <%= infoList[i].resumeLink %> </h6>
+                Qualified?: <input type="checkbox" name="applicationStatus" value="<%= infoList[i].email %>">
+                <br>
+            </div>
+            </div>
+        <% } %>
+        <br>
+    <% } %>
+    <button class="w-100 btn btn-primary btn-lg" type="submit"> Send Shortlist Report </button>
+</form>
+
+
+<%- include("partials/footer.ejs") -%>

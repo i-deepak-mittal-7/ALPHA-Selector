@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs") -%>
+
+<main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/css/Alpha.webp" width="190" height="100">
+      <h2>Application form</h2>
+      <p class="lead">Please enter all the required information. Also ensure the information is correct and best of your knowledge</p>
+    </div>
+
+    <h4 class="mb-3">Applying for: <%= post %></h4>
+
+    <div class="row g-5">
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Candidate info</h4>
+        <form action="/applyForm" method="post">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label"> Email </label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label"> Password </label>
+              <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            <div class="col-12">
+              <label for="skills" class="form-label">Skills</label>
+              <input type="text" class="form-control" id="Skills" name="skills" required>
+            </div>
+
+            <div class="col-12">
+              <label for="resumeLink" class="form-label">Resume Link</label>
+              <input type="text" class="form-control" id="resume" name="resumeLink" required>
+            </div>
+
+          </div>
+          <br>
+          <br>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Apply </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+<%- include("partials/footer.ejs") -%>
