@@ -21,7 +21,7 @@ var alert;
 var post;
 
 
-app.get("/student",function(req,res){
+app.get("/",function(req,res){
   res.render("student.ejs");
 });
 
